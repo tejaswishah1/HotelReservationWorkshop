@@ -8,14 +8,15 @@
         /// <summary>
         /// Declaring name of hotel
         /// </summary>
-        string mNameOfHotel;
+       public  string mNameOfHotel;
         /// <summary>
         /// Rate of Hotel
         /// </summary>
-        int mRegularRate;
+       public int mRegularRate;
         /// <summary>
         /// Constructor to assign default values
         /// </summary>
+
         public Hotel()
         {
             this.mNameOfHotel = null;
