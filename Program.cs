@@ -8,13 +8,13 @@ namespace HotelReservationSystemWorkshop
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Hotel Reservation System");
-            ////Creating list to store values:
-            List<Hotel> hotels = new List<Hotel>();
-
-            ////Adding Hotel names
-            hotels.Add(new Hotel("Lakewood", 110));
-            hotels.Add(new Hotel("Bridgewood", 160));
-            hotels.Add(new Hotel("Ridgewood", 220));
+            HotelFunctions miami = new HotelFunctions();
+            ////Adding Hotels in Miami
+            miami.AddHotel();
+            ////Show cheapest hotels for given dates
+            string[] dates = UserFunctions.EnterDate();
+            Hotel chaeapestHotel = miami.FindCheapestHotel();
+            Console.WriteLine("Cheapest Hotel : Name : {0}, Price = {1}", chaeapestHotel.mNameOfHotel, chaeapestHotel.mRegularWeekdayRate * dates.Length);
         }
     }
 }

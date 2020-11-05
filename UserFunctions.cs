@@ -9,12 +9,7 @@ namespace HotelReservationSystemWorkshop
     /// </summary>
     public class UserFunctions
     {
-
-        /// <summary>
-        /// Check date
-        /// </summary>
-        /// <returns></returns>
-        public string[] EnterDate()
+        public static string[] EnterDate()
         {
             string[] dates = new string[] { };
             try
@@ -22,7 +17,6 @@ namespace HotelReservationSystemWorkshop
                 Console.WriteLine("Enter dates of booking (enter dates in format DD/MM/YYYY and separated by ,");
                 dates = Console.ReadLine().Split(',');
             }
-            ////Exception
             catch
             {
                 if (dates == null)

@@ -11,11 +11,12 @@ namespace HotelReservationSystemWorkshop
         /// Adding 3 hotels of Miami
         /// </summary>
         List<Hotel> hotels = new List<Hotel>();
-        public void AddHotel()
+        public List<Hotel> AddHotel()
         {
-            hotels.Add(new Hotel("Lakewood", 110));
-            hotels.Add(new Hotel("Bridgewood", 160));
-            hotels.Add(new Hotel("Ridgewood", 220));
+            hotels.Add(new Hotel("Lakewood", 110, 90));
+            hotels.Add(new Hotel("Bridgewood", 160, 50));
+            hotels.Add(new Hotel("Ridgewood", 220, 150));
+            return hotels;
         }
         /// <summary>
         /// Fucntion to find cheapest hotel
@@ -23,7 +24,7 @@ namespace HotelReservationSystemWorkshop
         /// <returns></returns>
         public Hotel FindCheapestHotel()
         {
-            hotels.OrderBy(x => x.mRegularRate);
+            hotels.OrderBy(x => x.mRegularWeekdayRate);
             return hotels[0];
         }
     }
